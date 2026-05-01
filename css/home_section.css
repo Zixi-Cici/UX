@@ -139,7 +139,6 @@
     position: relative;
 }
 .product-card > img {
-    width: 220px;
     height: 220px;
     align-self: center;
     margin-bottom: 20px;
@@ -171,4 +170,53 @@
     font-size: 16px;
     color: white;
     font-weight: 550;
+}
+
+/* user review */
+.user-review {
+    height: 450px;
+    background: linear-gradient(44deg, #6a40ff 12%, #e9deff 100%);
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 120px 40px 120px;
+}
+.user-info {
+    display: flex;
+    align-self: flex-start;
+    gap: 16px;
+}
+.user-info > img {
+    width: 60px;
+    height: 60px;
+}
+.user-name p {
+    color: white;
+    font-weight: 550;
+    margin: 4px;
+}
+.user-name img {
+    width: 101.44px;
+}
+.user-review article {
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    margin: auto;
+}
+.user-review-control {
+    margin-top: auto;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.user-review-control > img {
+    width: 30px;
+    height: 30px;
+}
+.user-review-dots img {
+    width: 62.4px;
+    height: 8px;
 }
