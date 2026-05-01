@@ -220,3 +220,48 @@
     width: 62.4px;
     height: 8px;
 }
+
+/* featured product */
+.promotion-card {
+    background-color: white;
+    padding: 30px;
+    margin: 80px 120px;
+    border-radius: 20px;
+    height: 463px;
+    display: flex;
+}
+.promotion-card img {
+    width: 523px;
+    height: 403px;
+    margin-left: auto;
+}
+.promotion-card-title {
+    font-size: 32px;
+    font-weight: 550;
+}
+.promotion-card-content {
+    display: flex;
+    flex-direction: column;
+}
+.promotion-card-content p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+.dog-treats-button {
+    border: none;
+    border-radius: 30px;
+    width: 556px;
+    height: 57px;
+    background: linear-gradient(90deg, #6a40ff 0%, #a06fff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0px;
+}
+.dog-treats-button p {
+    color: white;
+    margin: 0px;
+    font-weight: 550;
+}
