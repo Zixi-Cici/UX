@@ -126,3 +126,31 @@
     font-size: 16px;
     font-weight: 200;
 }
+
+/* breadcrumb navigation */
+.breadcrumb-nav {
+    height: 60px;
+    background-color: #f5f5f5;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.breadcrumb-nav p {
+    margin: 0px;
+}
+.breadcrumb-nav a {
+    height: 24px;
+}
+.home-icon {
+    width: 24px;
+    height: 24px;
+}
+.breadcrumb-arrow {
+    width: 6px;
+    height: 12px;
+}
+
+
