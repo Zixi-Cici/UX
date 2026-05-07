@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product_list_toys</title>
+    <title>product_detail_1</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/product_list.css">
+    <link rel="stylesheet" href="css/product_detail.css">
 </head>
 <body>
     <!--nav bar-->
@@ -31,42 +31,69 @@
             <img class="home-icon" src="images/icon/home_icon.png" alt="home-icon">
         </a>
         <img class="breadcrumb-arrow" src="images/icon/breadcrumb_arrow.png" alt="breadcrumb-arrow">
-        <p>Dog Toys</p>
+        <a href="product_list_toy.html">
+            <p>Dog Toys</p>
+        </a>
+        <img class="breadcrumb-arrow" src="images/icon/breadcrumb_arrow.png" alt="breadcrumb-arrow">
+        <p>Product Detail</p>
     </div>
 
-    <!--hero section-->
-    <div class="hero-section" style="background-image: url(images/image/product_list_hero_image.png);">
-        <div class="hero-text">
-            <h1>Dog Toys.</h1>
-            <p>Everything your dog needs - from care to playtime.</p>
+    <!--product detail-->
+    <div class="product-detail">
+        <img class="product-image" id="productImage" src="">
+        <div class="product-info">
+            <div class="product-title">
+                <p id="productName"></p>
+                <article id="productPrice"></article>
+            </div>
+            <div class="product-colour">
+                <p>2 colour available</p>
+                <div class="colour-selection">
+                    <img class="selected-colour" src="images/icon/blue_circle_big.png" alt="blue-circle-big">
+                    <img class="unselected-colour" src="images/icon/red_circle_small.png" alt="red-circle-small">
+                </div>
+            </div>
+            <button class="add_to_cart_button_big">
+                <img src="images/icon/add_to_card_icon_big.png" alt="add-to-card-icon-big">
+                <p>Add to Cart</p>
+            </button>
+            <div class="accordion-card">
+                <details class="accordion-item">
+                    <summary>
+                        <p>Description</p>
+                        <img src="images/icon/accordion_card_arrow.png" alt="accordion-card-arrow">
+                    </summary>
+                    <p id="productDescription"></p>
+                </details>
+                <details class="accordion-item">
+                    <summary>
+                        <p>Material</p>
+                        <img src="images/icon/accordion_card_arrow.png" alt="accordion-card-arrow">
+                    </summary>
+                    <p id="productMaterial"></p>
+                </details>
+                <details class="accordion-item">
+                    <summary>
+                        <p>Suitable Dog</p>
+                        <img src="images/icon/accordion_card_arrow.png" alt="accordion-card-arrow">
+                    </summary>
+                    <p id="productSuitableDog"></p>
+                </details>
+            </div>
+            
         </div>
-        <div class="hero-shopping">
-            <button class="hero-tag">
-                <img src="images/icon/toys-icon.png" alt="toys-icon">
-                <p>Dog Toys</p>
-            </button>
-            <button class="hero-tag">
-                <img src="images/icon/treats_icon.png" alt="treats-icon">
-                <p>Dog Treats</p>
-            </button>
-            <button class="hero-tag">
-                <img src="images/icon/shampoo_icon.png" alt="shampoo-icon">
-                <p>Dog Shampoo</p>
+    </div>
+
+    <!--you might also like-->
+    <div class="featured-product">
+        <div class="featured-product-title">
+            <p>You may also like</p>
+            <button class="view-all-button">
+                <p>View all</p>
+                <img src="images/icon/arrow_right_4_8.png" alt="arrow-right-small">
             </button>
         </div>
-    </div>
-
-    <!--filter-->
-    <div class="filter">
-        <button class="filter-button">
-            <img src="images/icon/filter_icon.png" alt="filter-icon">
-            <p>Filter</p>
-        </button>
-        <p>14 Products</p>
-    </div>
-
-    <!--product list-->
-    <div class="product-list">
+    
         <div class="product-row">
             <div class="product-card">
                 <div class="discount-badge">
@@ -122,56 +149,6 @@
                 </button>
             </div>
         </div>
-    
-        <div class="product-row">
-            <div class="product-card">
-                <a href="product_detail_1.html?id=nylonSkullDogToy">
-                    <img src="images/image/Nylon_Skull_Dog_Toy-2084-1630 1.png" alt="nylon-skull-dog-toy">
-                    <p>Nylon Skull Dog Toy</p>
-                    <p style="color: #6a40ff;">$29.95</p>
-                </a>
-                <button class="add-to-cart-home">
-                    <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
-                    <p>Add</p>
-                </button>
-            </div>
-    
-            <div class="product-card">
-                <a href="product_detail_1.html?id=footballWithSqueaker">
-                    <img src="images/image/Ultra_Play_TPR_Football_with_Squeaker-2112-1652 1.png" alt="ultra-play-TPR-football-with-squeaker">
-                    <p>Ultra Play TPR Football with Squeaker</p>
-                    <p style="color: #6a40ff;">$29.95</p>
-                </a>
-                <button class="add-to-cart-home">
-                    <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
-                    <p>Add</p>
-                </button>
-            </div>
-    
-            <div class="product-card">
-                <a href="product_detail_1.html?id=screamXtremeRopeMan">
-                    <img src="images/image/Scream_Xtreme_Rope_Man_Blue-2010-1589 1.png" alt="scream_xtreme_rope_man_blue">
-                    <p>Scream Xtreme Rope Man</p>
-                    <p style="color: #6a40ff;">$14.95</p>
-                </a>
-                <button class="add-to-cart-home">
-                    <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
-                    <p>Add</p>
-                </button>
-            </div>
-    
-            <div class="product-card">
-                <a href="product_detail_1.html?id=chunckitKickOff">
-                    <img src="images/image/Chuckit_Kick_Off-2050-1607 1.png" alt="chuckit-kick-off">
-                    <p>Chunckit Kick Off</p>
-                    <p style="color: #6a40ff;">$44.95</p>
-                </a>
-                <button class="add-to-cart-home">
-                    <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
-                    <p>Add</p>
-                </button>
-            </div>
-        </div>
     </div>
 
     <!--contact us-->
@@ -185,7 +162,7 @@
             <p>Contact Us</p>
         </button>
     </div>
-
+    
     <!--footer-->
     <div class="footer">
         <ul class="footer-products">
@@ -207,8 +184,7 @@
             </ul>
         </ul>
     </div>
-
-
+    
     <script src="Javascript/product-detail.js"></script>
 </body>
 </html>

@@ -143,6 +143,8 @@
 }
 .breadcrumb-nav a {
     height: 24px;
+    text-decoration: none;
+    color: #444444;
 }
 .home-icon {
     width: 24px;

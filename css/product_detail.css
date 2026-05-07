@@ -1,0 +1,227 @@
+/* product detail */
+.product-detail {
+    display: flex;
+    margin: 40px 120px;
+    gap: 50px;
+}
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.product-image {
+    width: 575px;
+    height: 575px;
+}
+.product-title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.product-title > p {
+    font-size: 32px;
+    font-weight: 550;
+    margin: 0;
+}
+.product-title article {
+    font-size: 24px;
+    font-weight: 550;
+    color: #6a40ff;
+}
+.product-colour {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-colour p {
+    font-size: 16px;
+    margin: 0;
+    color: #727272;
+}
+.colour-selection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.selected-colour {
+    width: 40px;
+    height: 40px;
+}
+.unselected-colour {
+    width: 30px;
+    height: 30px;
+}
+/* add to cart button */
+.add_to_cart_button_big {
+    height: 64px;
+    padding: 20px 30px;
+    border: none;
+    background: linear-gradient(90deg, #6a40ff 0%, #a06fff 100%);
+    border-radius: 36px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.add_to_cart_button_big img {
+    width: 24px;
+    height: 24px;
+}
+.add_to_cart_button_big p {
+    font-size: 20px;
+    font-weight: 550;
+    color: white;
+}
+/* accordion card */
+.accordion-card {
+    width: 100%;
+    max-width: 575px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.accordion-item {
+    width: 100%;
+    border-bottom: 2px solid #f2f2f2;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+summary {
+    min-width: 535px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+summary p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+summary img {
+    width: 24px;
+    height: 24px;
+}
+details[open] summary img {
+    transform: rotate(180deg);
+}
+
+/* you might also like */
+.featured-product {
+    padding: 0 120px;
+    margin-top: 32px;
+    margin-bottom: 80px;
+}
+.featured-product-title {
+    display: flex;
+    align-items: center;
+}
+.featured-product-title > p {
+    font-size: 40px;
+    font-weight: 650;
+}
+.view-all-button {
+    height: 48px;
+    display: flex;
+    border: none;
+    background-color: white;
+    border-radius: 35px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    margin-left: auto;
+}
+.view-all-button p {
+    font-size: 18px;
+    color: #472F91;
+    font-weight: 550;
+}
+.view-all-button img {
+    width: 6px;
+    height: 12px;
+}
+.discount-badge {
+    width: 72px;
+    height: 32px;
+    border-radius: 23px;
+    background-color: #a9fe63;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+}
+.discount-badge p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0px;
+}
+.product-row {
+    display: flex;
+    gap: 30px;
+}
+.product-card {
+    box-sizing: border-box;
+    width: 277px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.3s;
+}
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+}
+.product-card a img {
+    height: 220px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+.product-card a p {
+    font-size: 18px;
+    font-weight: 550;
+    margin: 4px;
+}
+.product-card a:hover p {
+    text-decoration: underline;
+}
+.product-card:hover {
+    transform: translate(0px, -4px);
+    box-shadow: 5px 5px 15px 0px rgba(150, 157, 187, 0.20);
+}
+.add-to-cart-home {
+    border: none;
+    background: linear-gradient(90deg, #6a40ff 0%, #a06fff 100%);
+    width: 86px;
+    height: 32px;
+    border-radius: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px, 15px, 5px, 15px;
+    gap: 10px;
+    align-self: flex-end;
+    margin-top: auto;
+}
+.add-to-cart-home img {
+    width: 16px;
+    height: 16px;
+}
+.add-to-cart-home p {
+    font-size: 16px;
+    color: white;
+    font-weight: 550;
+}
