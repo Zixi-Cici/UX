@@ -102,12 +102,21 @@ summary p {
     font-weight: 600;
     margin: 0;
 }
+.accordion-item:hover summary p {
+    text-decoration: underline;
+}
 summary img {
     width: 24px;
     height: 24px;
 }
-details[open] summary img {
+.accordion-arrow {
+    transition: 0.3s;
+}
+details[open] .accordion-arrow {
     transform: rotate(180deg);
+}
+.accordion-item:hover .accordion-arrow  {
+    content: url(../images/icon/hover_accordion_card_arrow.png);
 }
 
 /* you might also like */

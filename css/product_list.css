@@ -123,6 +123,8 @@
 .product-card a {
     text-decoration: none;
     color: inherit;
+    display: flex;
+    flex-direction: column;
 }
 .product-card a img {
     height: 220px;

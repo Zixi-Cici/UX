@@ -9,18 +9,27 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    z-index: 1000;
 }
 .nav-text {
     display: flex;
     gap: 30px;
     justify-self: start;
 }
-.nav-text p {
+.nav-text a {
     font-size: 16px;
     font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+.nav-text a:hover {
+    text-decoration: underline;
+    color: #6a40ff;
+    transform: translate(0px, -3px);
 }
 .nav-logo {
     justify-self: center;
