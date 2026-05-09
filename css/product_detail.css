@@ -234,3 +234,215 @@ details[open] .accordion-arrow {
     color: white;
     font-weight: 550;
 }
+
+/* shopping cart overlay */
+.cart-overlay {
+    width: 548px;
+    height: 1024px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.cart-overlay-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-overlay-title p {
+    font-size: 32px;
+    font-weight: 550;
+    margin: 0;
+}
+.cart-overlay-quit-button {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+.cart-overlay-quit-button img {
+    width: 20px;
+    height: 20px;
+}
+.cart-overlay-content {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+}
+#overlayProductImage {
+    width: 136px;
+    height: 136px;
+}
+.cart-overlay-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#overlayProductName {
+    font-size: 18px;
+    font-weight: 550;
+    margin: 0;
+}
+#overlayProductColour {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+#overlayProductPrice {
+    font-size: 20px;
+    font-weight: 550;
+    margin: 0;
+    color: #6a40ff;
+}
+.cart-overlay-action {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+.cart-overlay-delete-button {
+    border: none;
+    background: none;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    align-self: flex-end;
+}
+.cart-overlay-delete-button img {
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+.quantity-control {
+    margin-top: auto;
+    width: 80px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.quantity-minus {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 10px;
+    height: 1.5px;
+}
+.quantity-minus img {
+    width: 10px;
+    height: 1.5px;
+    display: block;
+}
+.quantity-plus {
+    border: none;
+    background: none;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+}
+.quantity-plus img {
+    width: 10px;
+    height: 10px;
+    display: block;
+}
+.quantity-number {
+    margin: 0;
+}
+.clear-all-button {
+    margin-left: auto;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.clear-all-button p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #727272;
+}
+/* shopping cart overlay - order summary */
+.cart-overlay-summary {
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-radius: 15px;
+    padding: 20px;
+}
+.cart-overlay-summary > p {
+    font-size: 24px;
+    font-weight: 550;
+    margin: 0;
+}
+.cart-overlay-column {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cart-overlay-subtotal, .cart-overlay-total, .cart-overlay-tax {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-overlay-subtotal p, .cart-overlay-tax p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+.cart-overlay-total p {
+    font-size: 20px;
+    font-weight: 550;
+    margin: 0;
+}
+/* shopping cart overlay - view cart button */
+.cart-overlay-button-section {
+    display: flex;
+    gap: 20px;
+}
+.view-cart-button {
+    width: 214px;
+    height: 54px;
+    border: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 40px;
+}
+.view-cart-button img {
+    width: 20px;
+    height: 20px;
+}
+.view-cart-button p {
+    font-size: 18px;
+    font-weight: 550;
+    color: #472F91;
+    margin: 0;
+}
+/* shopping cart overlay - checkOut button */
+.overlay-checkout-button {
+    width: 214px;
+    height: 54px;
+    border: none;
+    background: #472F91;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay-checkout-button p {
+    font-size: 18px;
+    font-weight: 550;
+    color: white;
+    margin: 0;
+}
