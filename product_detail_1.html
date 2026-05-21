@@ -186,58 +186,60 @@
     </div>
 
     <!--shopping cart overlay-->
-    <div class="cart-overlay" id="cartOverlay">
-        <div class="cart-overlay-title">
-            <p>Cart</p>
-            <button class="cart-overlay-quit-button" id="closeCartButton">
-                <img src="images/icon/quit_button_overlay.png" alt="quit-button-overlay">
-            </button>
-        </div>
-
-        <div class="cart-overlay-content">
-            <div class="cart-overlay-container">
-            </div>
-
-            <div class="cart-overlay-action">
-                <button class="cart-overlay-delete-button">
-                    <img src="images/icon/delete_button_overlay.png" alt="delete-button-overlay">
+    <div class="overlay-background" id="overlayBackground">
+        <div class="cart-overlay" id="cartOverlay">
+            <div class="cart-overlay-title">
+                <p>Cart</p>
+                <button class="cart-overlay-quit-button" id="closeCartButton">
+                    <img src="images/icon/quit_button_overlay.png" alt="quit-button-overlay">
                 </button>
-                <div class="quantity-control">
-                    <button class="quantity-minus"><img src="images/icon/delete_icon.png" alt="delete-icon"></button>
-                    <p class="quantity-number">1</p>
-                    <button class="quantity-plus"><img src="images/icon/add_icon.png" alt="add-icon"></button>
+            </div>
+    
+            <div class="cart-overlay-content">
+                <div class="cart-overlay-container">
+                </div>
+    
+                <div class="cart-overlay-action">
+                    <button class="cart-overlay-delete-button">
+                        <img src="images/icon/delete_button_overlay.png" alt="delete-button-overlay">
+                    </button>
+                    <div class="quantity-control">
+                        <button class="quantity-minus"><img src="images/icon/delete_icon.png" alt="delete-icon"></button>
+                        <p class="quantity-number">1</p>
+                        <button class="quantity-plus"><img src="images/icon/add_icon.png" alt="add-icon"></button>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <button class="clear-all-button"><p>Clear All</p></button>
-
-        <div class="cart-overlay-summary">
-            <p>Order Summary</p>
-            <div class="cart-overlay-column">
-                <div class="cart-overlay-subtotal">
-                    <p>subtotal</p>
-                    <p id="overlayProductSubtotal">$9.95</p>
-                </div>
-                <div class="cart-overlay-total">
-                    <p>Total</p>
-                    <p id="overlayProductTotal">$9.95 AUD</p>
-                </div>
-                <div class="cart-overlay-tax">
-                    <p>Tax</p>
-                    <p>$0.00</p>
+    
+            <button class="clear-all-button"><p>Clear All</p></button>
+    
+            <div class="cart-overlay-summary">
+                <p>Order Summary</p>
+                <div class="cart-overlay-column">
+                    <div class="cart-overlay-subtotal">
+                        <p>subtotal</p>
+                        <p id="overlayProductSubtotal">$9.95</p>
+                    </div>
+                    <div class="cart-overlay-total">
+                        <p>Total</p>
+                        <p id="overlayProductTotal">$9.95 AUD</p>
+                    </div>
+                    <div class="cart-overlay-tax">
+                        <p>Tax</p>
+                        <p>$0.00</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="cart-overlay-button-section">
-            <button class="view-cart-button">
-                <img src="images/icon/add_to_cart_overlay_icon.png" alt="add-to-cart-overlay-icon">
-                <p>View Cart</p>
-            </button>
-            <button class="overlay-checkout-button">
-                <p>CheckOut</p>
-            </button>
+    
+            <div class="cart-overlay-button-section">
+                <button class="view-cart-button">
+                    <img src="images/icon/add_to_cart_overlay_icon.png" alt="add-to-cart-overlay-icon">
+                    <p>View Cart</p>
+                </button>
+                <button class="overlay-checkout-button">
+                    <p>CheckOut</p>
+                </button>
+            </div>
         </div>
     </div>
     

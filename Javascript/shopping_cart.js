@@ -2,7 +2,8 @@ console.log("shopping cart js loaded");
 //open and close overlay
 const cartOverlay = document.getElementById("cartOverlay")
 const closeCartButton = document.getElementById("closeCartButton")
-const addButtons = document.querySelectorAll(".add-cart-button") //会把所有button放进NodeList
+const addButtons = document.querySelectorAll(".add-cart-button") 
+const overlayBackground = document.getElementById("overlayBackground")//会把所有button放进NodeList
 
 let cart = []
 
@@ -14,11 +15,13 @@ addButtons.forEach(function(button){ //把所有按钮一个一个拿出来
 
         updateCartOverlay() //调用function
 
+        overlayBackground.classList.add("show")
         cartOverlay.classList.add("show") //给每个cartOverlay的class再加上class=“show”（显示overlay）
     })
 })
 
 closeCartButton.addEventListener("click", function(){ //退出按钮
+    overlayBackground.classList.remove("show")
     cartOverlay.classList.remove("show")
 })
 
