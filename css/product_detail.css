@@ -305,13 +305,14 @@ details[open] .accordion-arrow {
 
 .cart-overlay-content {
     display: flex;
-    border-bottom: 2px solid #f2f2f2;
-    padding-bottom: 30px;
 }
 
 .cart-overlay-item {
     display: flex;
     gap: 20px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    border-bottom: 2px solid #f2f2f2;
 }
 
 .overlay-product-image {
@@ -414,6 +415,12 @@ details[open] .accordion-arrow {
     text-decoration: underline;
     color: #727272;
 }
+
+.cart-overlay-container {
+    max-height: 414px;
+    overflow-y: auto;
+}
+
 /* shopping cart overlay - order summary */
 .cart-overlay-summary {
     border-style: solid;
