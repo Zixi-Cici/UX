@@ -10,7 +10,7 @@
 </head>
 <body>
     <!--nav bar-->
-    <div class="nav-bar">
+    <nav class="nav-bar">
         <div class="nav-text">
             <a href="product_list_toy.html">Dog Toys</a>
             <a href="product_list_treats.html">Dog Treats</a>
@@ -23,7 +23,7 @@
             <img src="images/icon/search_icon.png" alt="search-icon">
             <img src="images/icon/shopping_cart_icon.png" alt="shopping-cart-icon">
         </div>
-    </div>
+    </nav>
 
     <!--breadcrumb nav-->
     <div class="breadcrumb-nav">
@@ -53,7 +53,7 @@
                     <img class="unselected-colour" src="images/icon/red_circle_small.png" alt="red-circle-small">
                 </div>
             </div>
-            <button class="add_to_cart_button_big">
+            <button class="add-to-cart-button-big add-cart-button">
                 <img src="images/icon/add_to_card_icon_big.png" alt="add-to-card-icon-big">
                 <p>Add to Cart</p>
             </button>
@@ -104,7 +104,7 @@
                     <p>TPR Giggle Throw Ball</p>
                     <p style="color: #6a40ff;">$9.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="giggleThrowBall">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -119,7 +119,7 @@
                     <p>Invincible Snake 6 Squeakers</p>
                     <p style="color: #6a40ff;">$39.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="invincibleSnakeSqueakers">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -131,7 +131,7 @@
                     <p>Rubber Chewy Chomper Dragon</p>
                     <p style="color: #6a40ff;">$29.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="rubberChewyChomperDragon">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -143,7 +143,7 @@
                     <p>Chunckit Amphibious Ball</p>
                     <p style="color: #6a40ff;">$9.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="chunckitAmphibiousBall">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -186,20 +186,16 @@
     </div>
 
     <!--shopping cart overlay-->
-    <div class="cart-overlay">
+    <div class="cart-overlay" id="cartOverlay">
         <div class="cart-overlay-title">
             <p>Cart</p>
-            <button class="cart-overlay-quit-button">
+            <button class="cart-overlay-quit-button" id="closeCartButton">
                 <img src="images/icon/quit_button_overlay.png" alt="quit-button-overlay">
             </button>
         </div>
 
         <div class="cart-overlay-content">
-            <img id="overlayProductImage" src="images/image/overlay_giggle_throw_ball.png" alt="overlay-giggle-throw-ball">
-            <div class="cart-overlay-info">
-                <p id="overlayProductName">TPR Giggle Throw Ball</p>
-                <p id="overlayProductColour">Colour: Blue</p>
-                <p id="overlayProductPrice">$9.95 AUD</p>
+            <div class="cart-overlay-container">
             </div>
 
             <div class="cart-overlay-action">
@@ -233,7 +229,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="cart-overlay-button-section">
             <button class="view-cart-button">
                 <img src="images/icon/add_to_cart_overlay_icon.png" alt="add-to-cart-overlay-icon">
@@ -246,5 +242,6 @@
     </div>
     
     <script src="Javascript/product-detail.js"></script>
+    <script src="Javascript/shopping_cart.js"></script>
 </body>
 </html>

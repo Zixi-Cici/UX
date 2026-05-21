@@ -194,8 +194,8 @@ const products = {
 }
 
 const searchText = window.location.search
-const splitText = searchText.split("=")
-const productId = splitText[1]
+const splitText = searchText.split("=") //['id','xxx']
+const productId = splitText[1] //['xxx']
 const product = products[productId]
 
 if (product) {
