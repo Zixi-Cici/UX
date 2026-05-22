@@ -234,6 +234,10 @@ details[open] .accordion-arrow {
     color: white;
     font-weight: 550;
 }
+.add-to-cart-home:hover {
+    transform: translate(0px, -2px);
+    background: #6a40ff;
+}
 /* shopping cart overlay - background */
 .overlay-background {
     position: fixed;
@@ -461,14 +465,15 @@ details[open] .accordion-arrow {
 .view-cart-button {
     width: 214px;
     height: 54px;
-    border: none;
     background: #f2f2f2;
     border-radius: 30px;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 16px 40px;
+    transition: 0.2s ease;
 }
 .view-cart-button img {
     width: 20px;
@@ -479,6 +484,9 @@ details[open] .accordion-arrow {
     font-weight: 550;
     color: #472F91;
     margin: 0;
+}
+.view-cart-button:hover {
+    border:2px solid #472F91;
 }
 /* shopping cart overlay - checkOut button */
 .overlay-checkout-button {

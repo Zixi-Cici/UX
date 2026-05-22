@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>purchase product</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/purchase_product.css">
+</head>
+<body>
+    <!--nav bar-->
+    <nav class="nav-bar">
+        <div class="nav-text">
+            <a href="product_list_toy.html">Dog Toys</a>
+            <a href="product_list_treats.html">Dog Treats</a>
+            <a href="product_list_shampoo.html">Dog Shampoo</a>
+        </div>
+        <div class="nav-logo">
+            <img src="images/icon/logo_icon.png" alt="logo">
+        </div>
+        <div class="nav-icon">
+            <img src="images/icon/search_icon.png" alt="search-icon">
+            <img src="images/icon/shopping_cart_icon.png" alt="shopping-cart-icon">
+        </div>
+    </nav>
+
+    <!--order total nav-->
+    <nav class="order-total">
+        <p class="order-total-title">Order Total</p>
+        <img src="images/icon/order_total_arrow.png" alt="order-total-arrow">
+        <p class="order-total-price">$9.95</p>
+    </nav>
+
+    <!--progress bar-->
+    <div class="checkout-progress-bar">
+        <div class="checkout-progress-fill"></div>
+
+        <div class="checkout-progress-content">
+            <div class="progress-bar-shipping">
+                <img src="images/icon/progress_bar_1.png" alt="progress-bar-1">
+                <span>Shipping</span>
+            </div>
+    
+            <div class="progress-bar-pay">
+                <img src="images/icon/progress-bar-2.png" alt="progress-bar-2">
+                <span>Pay</span>
+            </div>
+        </div>
+    </div>
+    
+    <!--user input - shipping-->
+    <div class="user-input">
+        <div class="user-input-contact">
+            <span>Contact</span>
+            <input id="email" type="text" placeholder="Email">
+        </div>
+    
+        <div class="user-input-delivery">
+            <span>Delivery</span>
+            <div class="input-delevery-column">
+                <input id="firstName" type="text" placeholder="First Name">
+                <input id="lastName" type="text" placeholder="Last Name">
+                <input id="company" type="text" placeholder="Company (optional)">
+                <input id="address" type="text" placeholder="Address">
+                <input id="country" type="text" placeholder="Country">
+                <input id="state" type="text" placeholder="State/Territory">
+                <input id="postcode" type="text" placeholder="Postcode">
+                <input id="phoneNumber" type="text" placeholder="Phone Number">
+            </div>
+        </div>
+        <div class="continue-button-container">
+            <button class="continue-button">
+                <p>Continue</p>
+                <img src="images/icon/purchase_product_arrow.png" alt="purchase-product-arrow">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

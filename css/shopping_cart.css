@@ -40,7 +40,7 @@
     height: 12px;
     margin-left: auto;
 }
-.cart-product-info {
+.cart-page-product-info {
     margin-top: 30px;
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@
     border-bottom: 2px solid #d9d9d9;
     padding-bottom: 30px;
 }
-.cart-product-info > img {
+.cart-page-product-info > img {
     width: 124px;
     height: 124px;
 }
