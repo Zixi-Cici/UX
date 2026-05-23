@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final payment</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/final_payment.css">
+</head>
+<body>
+    <!--nav bar-->
+    <nav class="nav-bar">
+        <div class="nav-text">
+            <a href="product_list_toy.html">Dog Toys</a>
+            <a href="product_list_treats.html">Dog Treats</a>
+            <a href="product_list_shampoo.html">Dog Shampoo</a>
+        </div>
+        <div class="nav-logo">
+            <img src="images/icon/logo_icon.png" alt="logo">
+        </div>
+        <div class="nav-icon">
+            <img src="images/icon/search_icon.png" alt="search-icon">
+            <img src="images/icon/shopping_cart_icon.png" alt="shopping-cart-icon">
+        </div>
+    </nav>
+
+    <!--order total nav-->
+    <nav class="order-total">
+        <p class="order-total-title">Order Total</p>
+        <img src="images/icon/order_total_arrow.png" alt="order-total-arrow">
+        <p class="order-total-price">$9.95</p>
+    </nav>
+
+    <!--progress bar-->
+    <div class="checkout-progress-bar">
+        <div class="checkout-progress-fill"></div>
+
+        <div class="checkout-progress-content">
+            <div class="progress-bar-shipping">
+                <img src="images/icon/progress_bar_1.png" alt="progress-bar-1">
+                <span>Shipping</span>
+            </div>
+    
+            <div class="progress-bar-pay">
+                <img src="images/icon/final_payment_2.png" alt="final-payment-2">
+                <span>Pay</span>
+            </div>
+        </div>
+    </div>
+
+    <!--payment content-->
+    <div class="payment-content">
+        <div class="payment-confirmation">
+            <span>Confirmation</span>
+            <div class="payment-confirmation-content">
+                <div class="user-info-confirm">
+                    <span class="confirmation-title">Contact</span>
+                    <span class="confirmation-info">123456@com</span>
+                </div>
+                <div class="user-info-confirm">
+                    <span class="confirmation-title">Ship to</span>
+                    <span class="confirmation-info">Cici W</span>
+                </div>
+                <div class="user-info-confirm">
+                    <span class="confirmation-title">Address</span>
+                    <span class="confirmation-info">xxxxxx</span>
+                </div>
+            </div>
+
+            <div class="back-button-container">
+                <button class="back-button">
+                    <img src="images/icon/final_pay_arrow.png" alt="final-pay-arrow">
+                    <p>Back</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="payment-method">
+            <span>Pay With</span>
+            <div class="payment-method-content">
+                <div class="payment-method-header">
+                    <img src="images/icon/payment_circle.png" alt="payment-circle">
+                    <span>Credit Card</span>
+                </div>
+                <div class="payment-method-input">
+                    <div class="payment-input-row">
+                        <input type="text" placeholder="Card Number">
+                        <input type="text" placeholder="Expiration Date">
+                    </div>
+                    <input type="text" placeholder="CVV">
+                    <button class="pay-button">
+                        <span>Pay Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
