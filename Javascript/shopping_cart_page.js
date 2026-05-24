@@ -3,10 +3,10 @@ console.log(savedCart)
 
 const cartPageContainer = document.querySelector(".cart-page-product-container");
 
+let pageTotal = 0
+
 function updateCartPage() {
     cartPageContainer.innerHTML = ""
-    
-    let pageTotal = 0
 
     savedCart.forEach(function(productId){
 
@@ -45,3 +45,17 @@ function updateCartPage() {
     document.getElementById("PageCartTotal").textContent = "$" + pageTotal.toFixed(2) + " AUD"
 }
 updateCartPage()
+
+const checkoutButton = document.querySelector(".check-out-button");
+
+checkoutButton.addEventListener("click", function(){
+
+    localStorage.setItem(
+
+        "cartTotal", pageTotal.toFixed(2)
+
+    )
+
+    window.location.href = "purchase_product.html"
+
+})

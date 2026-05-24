@@ -12,7 +12,17 @@ let cart = []
 
 addButtons.forEach(function(button){ //把所有按钮一个一个拿出来
     button.addEventListener("click", function(){ //当按钮被点击时执行以下代码
-        const productId = button.dataset.id //读取button的id
+        let productId = button.dataset.id
+
+        if (!productId) {
+
+            const searchText = window.location.search
+
+            const splitText = searchText.split("=")
+
+            productId = splitText[1]
+
+        }
         cart.push(productId)
         console.log(cart)
 
