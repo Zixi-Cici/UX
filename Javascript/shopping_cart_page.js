@@ -1,9 +1,9 @@
-const savedCart = JSON.parse(localStorage.getItem("cart")) || [] //读取购物车，如果没有就创建空购物车
+const savedCart = JSON.parse(localStorage.getItem("cart")) || [] //read shopping cart overlay
 console.log(savedCart)
 
 const cartPageContainer = document.querySelector(".cart-page-product-container");
 
-let pageTotal = 0
+let pageTotal = 0 //total price
 
 function updateCartPage() {
     cartPageContainer.innerHTML = ""

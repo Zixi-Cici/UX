@@ -1,7 +1,9 @@
+//read total price
 const total = localStorage.getItem("cartTotal")
 
 document.querySelector(".order-total-price").textContent = "$" + total + " AUD"
 
+//make continue button clickable, save data from users
 const continueButton = document.querySelector(".continue-button")
 
 continueButton.addEventListener("click", function(){

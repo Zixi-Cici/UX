@@ -134,6 +134,7 @@ body {
     align-items: center;
     padding: 5px 5px 5px 24px;
     border-radius: 55px;
+    transition: 0.3s ease;
 }
 
 .continue-button p {
@@ -153,4 +154,9 @@ body {
     justify-content: flex-end;
     margin-top: 50px;
     margin-bottom: 100px;
+}
+
+.continue-button:hover {
+    background: linear-gradient(90deg, #6a40ff 70%, #a06fff 100%);
+    transform: translate(0px, -2px);
 }

@@ -4,16 +4,18 @@ const cartOverlay = document.getElementById("cartOverlay")
 const closeCartButton = document.getElementById("closeCartButton")
 const addButtons = document.querySelectorAll(".add-cart-button") 
 const overlayBackground = document.getElementById("overlayBackground")
-const cartItemsContainer = document.querySelector(".cart-overlay-container") //找到这个class
+const cartItemsContainer = document.querySelector(".cart-overlay-container")
 const clearAllButton = document.querySelector(".clear-all-button")
 const viewCartButton = document.querySelector(".view-cart-button")
 
 let cart = []
 
-addButtons.forEach(function(button){ //把所有按钮一个一个拿出来
-    button.addEventListener("click", function(){ //当按钮被点击时执行以下代码
+//add to cart button
+addButtons.forEach(function(button){
+    button.addEventListener("click", function(){ 
         let productId = button.dataset.id
 
+        //if it is the big button in detail page, no data-id
         if (!productId) {
 
             const searchText = window.location.search
@@ -23,17 +25,17 @@ addButtons.forEach(function(button){ //把所有按钮一个一个拿出来
             productId = splitText[1]
 
         }
-        cart.push(productId)
-        console.log(cart)
 
-        updateCartOverlay() //调用function
+        cart.push(productId)
+
+        updateCartOverlay()
 
         overlayBackground.classList.add("show")
-        cartOverlay.classList.add("show") //给每个cartOverlay的class再加上class=“show”（显示overlay）
+        cartOverlay.classList.add("show")
     })
 })
 
-closeCartButton.addEventListener("click", function(){ //退出按钮
+closeCartButton.addEventListener("click", function(){ //close cart button
     overlayBackground.classList.remove("show")
     cartOverlay.classList.remove("show")
 })
@@ -47,23 +49,24 @@ viewCartButton.addEventListener("click", function(){
     window.location.href = "shopping_cart.html"
 })
 
-function updateCartOverlay() {
-    localStorage.setItem("cart", JSON.stringify(cart)) //把cart array存进浏览器
+function updateCartOverlay() {  //update add to cart overlay
+    localStorage.setItem("cart", JSON.stringify(cart))
 
     cartItemsContainer.innerHTML = ""
 
-    let total = 0 //用来存商品总价格
+    let total = 0 //total price
 
-    cart.forEach(function(productId){ //遍历每个商品id
-        const product = products[productId] //根据key找value
-        const priceNumber = Number(product.productPrice.replace("$","")) //找到商品价格，去掉$
+    cart.forEach(function(productId){ 
+        const product = products[productId] 
+        const priceNumber = Number(product.productPrice.replace("$",""))
 
-        total = total + priceNumber //加入商品价格
+        total = total + priceNumber 
 
-        const cartItem = document.createElement("div") //创一个div
-        cartItem.classList.add("cart-overlay-item") //加class名字
+        const cartItem = document.createElement("div") 
+        cartItem.classList.add("cart-overlay-item") 
 
-        cartItem.innerHTML = `
+        //update content
+        cartItem.innerHTML = `  
         <img class="overlay-product-image" src="${product.productImage}" alt="${product.productName}">
                 <div class="cart-overlay-info">
                     <p class="overlay-product-name">${product.productName}</p>
@@ -82,10 +85,10 @@ function updateCartOverlay() {
                     </div>
                 </div>
         `
-        cartItemsContainer.appendChild(cartItem) //把新的item加入购物车
+        cartItemsContainer.appendChild(cartItem) //add new products to shopping cart
 
     })
 
-    document.getElementById("overlayProductSubtotal").textContent = "$" + total.toFixed(2) //保留两位小数，显示到HTML
+    document.getElementById("overlayProductSubtotal").textContent = "$" + total.toFixed(2) 
     document.getElementById("overlayProductTotal").textContent = "$" + total.toFixed(2) + " AUD"
 }
