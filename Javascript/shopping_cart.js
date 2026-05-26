@@ -1,4 +1,3 @@
-console.log("shopping cart js loaded");
 //open and close overlay
 const cartOverlay = document.getElementById("cartOverlay")
 const closeCartButton = document.getElementById("closeCartButton")
@@ -13,7 +12,7 @@ let cart = []
 //add to cart button
 addButtons.forEach(function(button){
     button.addEventListener("click", function(){ 
-        let productId = button.dataset.id
+        let productId = button.dataset.id //read the elements start by data-
 
         //if it is the big button in detail page, no data-id
         if (!productId) {
@@ -30,19 +29,19 @@ addButtons.forEach(function(button){
 
         updateCartOverlay()
 
-        overlayBackground.classList.add("show")
+        overlayBackground.classList.add("show") //add class to the element (add black background)
         cartOverlay.classList.add("show")
     })
 })
 
 closeCartButton.addEventListener("click", function(){ //close cart button
-    overlayBackground.classList.remove("show")
+    overlayBackground.classList.remove("show") //remove the class
     cartOverlay.classList.remove("show")
 })
 
 clearAllButton.addEventListener("click", function(){ //clear all button
-    cart = []
-    updateCartOverlay()
+    cart = [] //clear array
+    updateCartOverlay() //update cart
 })
 
 viewCartButton.addEventListener("click", function(){
@@ -50,7 +49,7 @@ viewCartButton.addEventListener("click", function(){
 })
 
 function updateCartOverlay() {  //update add to cart overlay
-    localStorage.setItem("cart", JSON.stringify(cart))
+    localStorage.setItem("cart", JSON.stringify(cart)) //save 'cart', and turn array to strings
 
     cartItemsContainer.innerHTML = ""
 
@@ -90,5 +89,6 @@ function updateCartOverlay() {  //update add to cart overlay
     })
 
     document.getElementById("overlayProductSubtotal").textContent = "$" + total.toFixed(2) 
+    //toFixed(2):0.00
     document.getElementById("overlayProductTotal").textContent = "$" + total.toFixed(2) + " AUD"
 }

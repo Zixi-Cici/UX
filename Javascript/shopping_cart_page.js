@@ -1,4 +1,7 @@
 const savedCart = JSON.parse(localStorage.getItem("cart")) || [] //read shopping cart overlay
+//JSON.parse:turn strings into array
+//localStorage.getItem:get item from localstorage
+
 console.log(savedCart)
 
 const cartPageContainer = document.querySelector(".cart-page-product-container");
@@ -52,7 +55,8 @@ checkoutButton.addEventListener("click", function(){
 
     localStorage.setItem(
 
-        "cartTotal", pageTotal.toFixed(2)
+        "cartTotal", pageTotal.toFixed(2) 
+        //save total price to local, so that purchase product page can use
 
     )
 

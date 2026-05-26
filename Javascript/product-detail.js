@@ -1,4 +1,4 @@
-const products = {
+const products = { //object
     giggleThrowBall: { //dog toys row 1
         productName: "TPR Giggle Throw Ball",
         productPrice: "$9.95",
@@ -193,12 +193,12 @@ const products = {
     },
 }
 
-const searchText = window.location.search
+const searchText = window.location.search //search the content after the url
 const splitText = searchText.split("=") //['id','xxx']
 const productId = splitText[1] //['xxx']
 const product = products[productId]
 
-if (product) {
+if (product) { //replace product detail
     document.getElementById("productName").textContent = product.productName;
     document.getElementById("productPrice").textContent = product.productPrice;
     document.getElementById("productImage").src = product.productImage;

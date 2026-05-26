@@ -1,5 +1,5 @@
 //read total price
-const total = localStorage.getItem("cartTotal")
+const total = localStorage.getItem("cartTotal") //get total price
 
 document.querySelector(".order-total-price").textContent = "$" + total + " AUD"
 
@@ -10,7 +10,7 @@ continueButton.addEventListener("click", function(){
 
     const shippingInfo = {
 
-        email: document.getElementById("email").value,
+        email: document.getElementById("email").value, //.value: content of user input
 
         firstName: document.getElementById("firstName").value,
 
@@ -29,6 +29,7 @@ continueButton.addEventListener("click", function(){
     }
 
     localStorage.setItem("shippingInfo", JSON.stringify(shippingInfo))
+    //save user input, and make object into strings
 
     window.location.href = "final_payment.html"
 
