@@ -2,9 +2,10 @@
 .hero-section {
     width: 100%;
     height: 520px;
+    margin-top: 80px;
     background-image: url("../images/image/hero-image.png");
     background-size: cover;
-    padding: 0 120px;
+    padding: 0px 120px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -66,6 +67,11 @@
 .hero-tag img {
     width: 20px;
     height: 20px;
+}
+
+
+.mobile-tag-section {
+    display: none;
 }
 
 /* featured product */
@@ -224,19 +230,18 @@
 .promotion-card {
     background-color: white;
     padding: 30px;
-    margin: 80px 120px;
+    margin: clamp(28px, 20vw, 120px);
     border-radius: 20px;
-    height: 463px;
     display: flex;
+    gap: 20px;
     box-shadow: 5px 5px 15px 0px rgba(150, 157, 187, 0.20);
 }
 .promotion-card img {
-    width: 523px;
-    height: 403px;
+    width: 50%;
     margin-left: auto;
 }
 .promotion-card-title {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 550;
 }
 .promotion-card-content {
@@ -251,8 +256,8 @@
 .dog-treats-button {
     border: none;
     border-radius: 30px;
-    width: 556px;
-    height: 57px;
+    width: 100%;
+    height: 50px;
     background: linear-gradient(90deg, #6a40ff 0%, #a06fff 100%);
     display: flex;
     align-items: center;
@@ -261,7 +266,126 @@
     padding: 0px;
 }
 .dog-treats-button p {
+    font-size: 18px;
     color: white;
     margin: 0px;
     font-weight: 550;
+}
+
+/* mobile version */
+@media (max-width: 768px) {
+    /* hero section */
+    .hero-section {
+        width: 100%;
+        height: 385px;
+        background-image: url("../images/image/hero_image_2.png");
+        background-size: cover;
+        background-position: 3% center;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 30px 20px;
+    }
+    
+    .hero-section h1 {
+        color: white;
+        font-size: 24px;
+        text-align: left;
+        margin: 0;
+        max-width: 200px;
+    }
+    
+    .hero-text p {
+        display: none;
+    }
+    
+    .hero-button {
+        display: none;
+    }
+    
+    .hero-shopping {
+        display: none;
+    }
+
+    /* tag section */
+    .mobile-tag-section {
+        display: flex;
+        padding: 30px 28px;
+        gap: clamp(15px, 4vw, 50px);
+        justify-content: center;
+    }
+
+    .mobile-tag {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .mobile-tag img {
+        width: 108px;
+    }
+
+    .mobile-tag span {
+        font-weight: 550;
+        font-size: clamp(14px, 4vw, 18px);
+        color: #472F91;
+    }
+
+    /* featured products */
+    .featured-product {
+        padding: 0 28px;
+        margin-top: 15px;
+    }
+    .featured-product-title > p {
+        font-size: clamp(24px, 4vw, 40px);
+        font-weight: 650;
+    }
+    .product-row {
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+    }
+
+    /* user review */
+    .user-review {
+        height: 320px;
+        margin-top: 40px;
+        padding: 28px;
+    }
+    .user-info > img {
+        width: 50px;
+        height: 50px;
+    }
+    .user-review article {
+        font-size: clamp(20px, 4vw, 25px);
+    }
+
+    /* promotion card */
+    .promotion-card {
+        padding: 30px;
+        margin: 40px 28px;
+        display: flex;
+        flex-direction: column;
+    }
+    .promotion-card img {
+        width: 100%;
+    }
+    .promotion-card-title {
+        font-size: 28px;
+    }
+    .promotion-card-content {
+        align-items: center;
+    }
+    .promotion-card-content p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .dog-treats-button {
+        margin-top: 20px;
+    }
+    .dog-treats-button p {
+        color: white;
+        margin: 0px;
+        font-weight: 550;
+    }
 }
