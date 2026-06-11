@@ -11,12 +11,12 @@ let pageTotal = 0 //total price
 function updateCartPage() {
     cartPageContainer.innerHTML = ""
 
-    savedCart.forEach(function(productId){
+    savedCart.forEach(function(cartItemData){
 
-        const product = products[productId]
+        const product = products[cartItemData.id]
 
         const PagePriceNumber = Number(product.productPrice.replace("$",""))
-        pageTotal = pageTotal + PagePriceNumber
+        pageTotal = pageTotal + PagePriceNumber * cartItemData.quantity
 
         //create cart product info
         const cartItem = document.createElement("div")
@@ -26,7 +26,6 @@ function updateCartPage() {
             <img src="${product.productImage}" alt="${product.productName}">
             <div class="product-info-text">
                 <p class="product-name">${product.productName}</p>
-                <p class="product-colour">Colour: Blue</p>
             </div>
             <div class="product-price">
                 <p>${product.productPrice}</p>
@@ -35,7 +34,7 @@ function updateCartPage() {
                 <button class="cart-delete-button"><img src="images/icon/delete_button_overlay.png" alt="delete-icon"></button>
                 <div class="quantity-control">
                     <button class="quantity-minus"><img src="images/icon/delete_icon.png" alt="delete-icon"></button>
-                    <p class="quantity-number">1</p>
+                    <p class="quantity-number">${cartItemData.quantity}</p>
                     <button class="quantity-plus"><img src="images/icon/add_icon.png" alt="add-icon"></button>
                 </div>
             </div>

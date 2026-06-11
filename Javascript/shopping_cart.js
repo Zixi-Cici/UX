@@ -25,7 +25,18 @@ addButtons.forEach(function(button){
 
         }
 
-        cart.push(productId)
+        const existingItem = cart.find(function(item) {
+            return item.id === productId;
+        })
+
+        if (existingItem) {
+            existingItem.quantity = existingItem.quantity + 1;
+        } else {
+            cart.push({
+                id: productId,
+                quantity: 1
+            });
+        }
 
         updateCartOverlay()
 
@@ -55,11 +66,11 @@ function updateCartOverlay() {  //update add to cart overlay
 
     let total = 0 //total price
 
-    cart.forEach(function(productId){ 
-        const product = products[productId] 
+    cart.forEach(function(cartItemData){ 
+        const product = products[cartItemData.id] 
         const priceNumber = Number(product.productPrice.replace("$",""))
 
-        total = total + priceNumber 
+        total = total + priceNumber * cartItemData.quantity
 
         const cartItem = document.createElement("div") 
         cartItem.classList.add("cart-overlay-item") 
@@ -69,7 +80,6 @@ function updateCartOverlay() {  //update add to cart overlay
         <img class="overlay-product-image" src="${product.productImage}" alt="${product.productName}">
                 <div class="cart-overlay-info">
                     <p class="overlay-product-name">${product.productName}</p>
-                    <p class="overlay-product-colour">Colour: Blue</p>
                     <p class="overlay-product-price">${product.productPrice} AUD</p>
                 </div>
 
@@ -78,15 +88,53 @@ function updateCartOverlay() {  //update add to cart overlay
                         <img src="images/icon/delete_button_overlay.png" alt="delete-button-overlay">
                     </button>
                     <div class="quantity-control">
-                        <button class="quantity-minus"><img src="images/icon/delete_icon.png" alt="delete-icon"></button>
-                        <p class="quantity-number">1</p>
-                        <button class="quantity-plus"><img src="images/icon/add_icon.png" alt="add-icon"></button>
+                        <button class="quantity-minus" data-id="${cartItemData.id}"><img src="images/icon/delete_icon.png" alt="delete-icon"></button>
+                        <p class="quantity-number">${cartItemData.quantity}</p>
+                        <button class="quantity-plus" data-id="${cartItemData.id}"><img src="images/icon/add_icon.png" alt="add-icon"></button>
                     </div>
                 </div>
         `
         cartItemsContainer.appendChild(cartItem) //add new products to shopping cart
 
     })
+
+    const plusButtons = document.querySelectorAll(".quantity-plus")
+
+        plusButtons.forEach(function(button){
+            button.addEventListener("click", function(){
+                const productId = button.dataset.id
+
+                const item = cart.find(function(cartItem){
+                    return cartItem.id === productId
+                })
+
+                item.quantity = item.quantity + 1
+
+                updateCartOverlay()
+            })
+        })
+
+        const minusButtons = document.querySelectorAll(".quantity-minus")
+
+        minusButtons.forEach(function(button){
+            button.addEventListener("click", function(){
+                const productId = button.dataset.id
+                const item = cart.find(function(cartItem){
+                    return cartItem.id === productId
+                })
+
+                if (item.quantity > 1) {
+                    item.quantity = item.quantity - 1
+                } else {
+                    cart = cart.filter(function(cartItem){
+                        return cartItem.id !== productId
+                    })
+                }
+
+                updateCartOverlay()
+            })
+        })
+
 
     document.getElementById("overlayProductSubtotal").textContent = "$" + total.toFixed(2) 
     //toFixed(2):0.00

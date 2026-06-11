@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/product_list.css">
+    <link rel="stylesheet" href="css/product_detail.css">
 </head>
 <body>
     <!--nav bar-->
@@ -77,7 +78,7 @@
                     <p>TPR Giggle Throw Ball</p>
                     <p style="color: #6a40ff;">$9.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="giggleThrowBall">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -92,7 +93,7 @@
                     <p>Invincible Snake 6 Squeakers</p>
                     <p style="color: #6a40ff;">$39.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="invincibleSnakeSqueakers">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -104,7 +105,7 @@
                     <p>Rubber Chewy Chomper Dragon</p>
                     <p style="color: #6a40ff;">$29.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="rubberChewyChomperDragon">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -116,7 +117,7 @@
                     <p>Chuckit Amphibious Ball</p>
                     <p style="color: #6a40ff;">$19.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="chunckitAmphibiousBall">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -130,7 +131,7 @@
                     <p>Nylon Skull Dog Toy</p>
                     <p style="color: #6a40ff;">$29.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="nylonSkullDogToy">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -142,7 +143,7 @@
                     <p>Ultra Play TPR Football with Squeaker</p>
                     <p style="color: #6a40ff;">$29.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="footballWithSqueaker">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -154,7 +155,7 @@
                     <p>Scream Xtreme Rope Man</p>
                     <p style="color: #6a40ff;">$14.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="screamXtremeRopeMan">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -166,7 +167,7 @@
                     <p>Chuckit Kick Off</p>
                     <p style="color: #6a40ff;">$44.95</p>
                 </a>
-                <button class="add-to-cart-home">
+                <button class="add-to-cart-home add-cart-button" data-id="chunckitKickOff">
                     <img src="images/icon/shopping_cart16_16.png" alt="shopping-cart-icon-home">
                     <p>Add</p>
                 </button>
@@ -208,7 +209,54 @@
         </ul>
     </div>
 
+    <!--shopping cart overlay-->
+    <div class="overlay-background" id="overlayBackground">
+        <div class="cart-overlay" id="cartOverlay">
+            <div class="cart-overlay-title">
+                <p>Cart</p>
+                <button class="cart-overlay-quit-button" id="closeCartButton">
+                    <img src="images/icon/quit_button_overlay.png" alt="quit-button-overlay">
+                </button>
+            </div>
+    
+            <div class="cart-overlay-content">
+                <div class="cart-overlay-container">
+                </div>
+            </div>
+    
+            <button class="clear-all-button"><p>Clear All</p></button>
+    
+            <div class="cart-overlay-summary">
+                <p>Order Summary</p>
+                <div class="cart-overlay-column">
+                    <div class="cart-overlay-subtotal">
+                        <p>Subtotal</p>
+                        <p id="overlayProductSubtotal">$9.95</p>
+                    </div>
+                    <div class="cart-overlay-total">
+                        <p>Total</p>
+                        <p id="overlayProductTotal">$9.95 AUD</p>
+                    </div>
+                    <div class="cart-overlay-tax">
+                        <p>Tax</p>
+                        <p>$0.00</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="cart-overlay-button-section">
+                <button class="view-cart-button">
+                    <img src="images/icon/add_to_cart_overlay_icon.png" alt="add-to-cart-overlay-icon">
+                    <p>View Cart</p>
+                </button>
+                <button class="overlay-checkout-button">
+                    <p>CheckOut</p>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="Javascript/product-detail.js"></script>
+    <script src="Javascript/shopping_cart.js"></script>
 </body>
 </html>
