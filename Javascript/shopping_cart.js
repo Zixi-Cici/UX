@@ -8,7 +8,7 @@ const clearAllButton = document.querySelector(".clear-all-button")
 const viewCartButton = document.querySelector(".view-cart-button")
 const overlayCheckoutButton = document.querySelector(".overlay-checkout-button")
 
-let cart = []
+let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 //add to cart button
 addButtons.forEach(function(button){

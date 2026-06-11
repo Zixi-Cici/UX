@@ -10,7 +10,7 @@ document.getElementById("confirmAddress").textContent = shippingInfo.address + "
 //pay now button
 const payButton = document.querySelector(".pay-button")
 
-payButton.addEventListener("click", function(){
+payButton.addEventListener("click", function(){ //form validation
 
     const inputs = document.querySelectorAll(".payment-method-input input")
     let allFilled = true
