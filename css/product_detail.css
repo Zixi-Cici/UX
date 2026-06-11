@@ -521,12 +521,16 @@ details[open] .accordion-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s ease;
 }
 .overlay-checkout-button p {
     font-size: 18px;
     font-weight: 550;
     color: white;
     margin: 0;
+}
+.overlay-checkout-button:hover {
+    background: black;
 }
 
 @media (max-width: 768px) {

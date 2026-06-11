@@ -6,6 +6,7 @@ const overlayBackground = document.getElementById("overlayBackground")
 const cartItemsContainer = document.querySelector(".cart-overlay-container")
 const clearAllButton = document.querySelector(".clear-all-button")
 const viewCartButton = document.querySelector(".view-cart-button")
+const overlayCheckoutButton = document.querySelector(".overlay-checkout-button")
 
 let cart = []
 
@@ -55,8 +56,12 @@ clearAllButton.addEventListener("click", function(){ //clear all button
     updateCartOverlay() //update cart
 })
 
-viewCartButton.addEventListener("click", function(){
+viewCartButton.addEventListener("click", function(){ //view cart button
     window.location.href = "shopping_cart.html"
+})
+
+overlayCheckoutButton.addEventListener("click", function(){ //checkout button
+    window.location.href = "purchase_product.html"
 })
 
 function updateCartOverlay() {  //update add to cart overlay
@@ -139,4 +144,5 @@ function updateCartOverlay() {  //update add to cart overlay
     document.getElementById("overlayProductSubtotal").textContent = "$" + total.toFixed(2) 
     //toFixed(2):0.00
     document.getElementById("overlayProductTotal").textContent = "$" + total.toFixed(2) + " AUD"
+    localStorage.setItem("cartTotal", total.toFixed(2))
 }

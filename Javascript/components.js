@@ -1,3 +1,4 @@
+//menu button
 const menuOverlay = document.getElementById("menuOverlay")
 const closeMenuButton = document.getElementById("closeButton")
 const menuButtons = document.getElementById("menuButton")
