@@ -12,6 +12,20 @@ const payButton = document.querySelector(".pay-button")
 
 payButton.addEventListener("click", function(){
 
+    const inputs = document.querySelectorAll(".payment-method-input input")
+    let allFilled = true
+
+    inputs.forEach(function(input){
+        if(input.value.trim() === ""){
+            allFilled = false
+        }
+    })
+
+    if(!allFilled){
+        alert("Please complete all payment information before continuing.")
+        return
+    }
+
     window.location.href = "payment_success.html"
 
 });

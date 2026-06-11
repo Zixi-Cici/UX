@@ -10,22 +10,36 @@ continueButton.addEventListener("click", function(){
 
     const shippingInfo = {
 
-        email: document.getElementById("email").value, //.value: content of user input
+        email: document.getElementById("email").value.trim(), //.value: content of user input
 
-        firstName: document.getElementById("firstName").value,
+        firstName: document.getElementById("firstName").value.trim(),
 
-        lastName: document.getElementById("lastName").value,
+        lastName: document.getElementById("lastName").value.trim(),
 
-        address: document.getElementById("address").value,
+        address: document.getElementById("address").value.trim(),
 
-        country: document.getElementById("country").value,
+        country: document.getElementById("country").value.trim(),
 
-        state: document.getElementById("state").value,
+        state: document.getElementById("state").value.trim(),
 
-        postcode: document.getElementById("postcode").value,
+        postcode: document.getElementById("postcode").value.trim(),
 
-        phoneNumber: document.getElementById("phoneNumber").value
+        phoneNumber: document.getElementById("phoneNumber").value.trim()
 
+    }
+
+    if (
+        shippingInfo.email === "" ||
+        shippingInfo.firstName === "" ||
+        shippingInfo.lastName === "" ||
+        shippingInfo.address === "" ||
+        shippingInfo.country === "" ||
+        shippingInfo.state === "" ||
+        shippingInfo.postcode === "" ||
+        shippingInfo.phoneNumber === ""
+    ) {
+        alert("Please fill in all required information before continuing.")
+        return
     }
 
     localStorage.setItem("shippingInfo", JSON.stringify(shippingInfo))

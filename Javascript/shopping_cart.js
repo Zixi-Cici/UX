@@ -61,6 +61,12 @@ viewCartButton.addEventListener("click", function(){ //view cart button
 })
 
 overlayCheckoutButton.addEventListener("click", function(){ //checkout button
+
+    if (cart.length === 0) { //if no products, cannot checkout
+        alert("Your cart is empty. Please add a product before checkout.")
+        return
+    }
+
     window.location.href = "purchase_product.html"
 })
 
