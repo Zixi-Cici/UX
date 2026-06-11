@@ -12,7 +12,9 @@
     <heading>
         <!--nav bar-->
         <nav class="nav-bar">
-            <img src="images/icon/menu_icon2.png" alt="menu-icon">
+            <button class="menu-button" id="menuButton">
+                <img src="images/icon/menu_icon2.png" alt="menu-icon">
+            </button>
             <div class="nav-text">
                 <a href="product_list_toy.html">Dog Toys</a>
                 <a href="product_list_treats.html">Dog Treats</a>
@@ -55,18 +57,24 @@
 
         <!--mobile version tag-->
         <div class="mobile-tag-section">
-            <div class="mobile-tag">
-                <img src="images/icon/mobile_toys_tag.png" alt="mobile-toys-tag">
-                <span>Dog Toys</span>
-            </div>
-            <div class="mobile-tag">
-                <img src="images/icon/mobile_treats_tag.png" alt="mobile-treats-tag">
-                <span>Dog Treats</span>
-            </div>
-            <div class="mobile-tag">
-                <img src="images/icon/mobile_shampoo_tag.png" alt="mobile-shampoo-tag">
-                <span>Dog Shampoo</span>
-            </div>
+            <a href="product_list_toy.html">
+                <div class="mobile-tag">
+                    <img src="images/icon/mobile_toys_tag.png" alt="mobile-toys-tag">
+                    <span>Dog Toys</span>
+                </div>
+            </a>
+            <a href="product_list_treats.html">
+                <div class="mobile-tag">
+                    <img src="images/icon/mobile_treats_tag.png" alt="mobile-treats-tag">
+                    <span>Dog Treats</span>
+                </div>
+            </a>
+            <a href="product_list_shampoo.html">
+                <div class="mobile-tag">
+                    <img src="images/icon/mobile_shampoo_tag.png" alt="mobile-shampoo-tag">
+                    <span>Dog Shampoo</span>
+                </div>
+            </a>
         </div>
 
         <!--featured product-->
@@ -265,6 +273,30 @@
             </ul>
         </div>
 
+        <!--menu overlay-->
+        <div class="menu-overlay" id="menuOverlay">
+            <button class="menu-overlay-quit-button" id="closeButton">
+                <img src="images/icon/quit_button_overlay.png" alt="quit-button-overlay">
+            </button>
+
+            <div class="menu-row">
+                <a href="product_list_toy.html">
+                    <span>Dog Toys</span>
+                </a>
+            </div>
+            <div class="menu-row">
+                <a href="product_list_treats.html">
+                    <span>Dog Treats</span>
+                </a>
+            </div>
+            <div class="menu-row">
+                <a href="product_list_shampoo.html">
+                    <span>Dog Shampoo</span>
+                </a>
+            </div>
+        </div>
+
+        <script src="Javascript/components.js"></script>
     </heading>
 </body>
 </html>

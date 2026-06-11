@@ -258,7 +258,7 @@ details[open] .accordion-arrow {
     opacity: 0;
     visibility: hidden;
     transition: 0.7s;
-    z-index: 1000;
+    z-index: 2000;
 
 }
 
@@ -281,7 +281,29 @@ details[open] .accordion-arrow {
     gap: 30px;
     display: flex;
     transition: right 0.7s ease;
-    z-index: 1001;
+    z-index: 2001;
+}
+
+@media (max-width: 768px) {
+    .cart-overlay {
+        width: 390px;
+        padding: 20px;
+    }
+    .overlay-product-name {
+        font-size: 16px;
+    }
+    .overlay-product-price {
+        font-size: 18px;
+    }
+    .view-cart-button p {
+        font-size: 14px;
+    }
+    .overlay-checkout-button p {
+        font-size: 14px;
+    }
+    .view-cart-button img {
+        width: 15px;
+    }
 }
 
 .cart-overlay.show {
@@ -342,11 +364,6 @@ details[open] .accordion-arrow {
     margin: 0;
 }
 
-.overlay-product-colour {
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
-}
 .overlay-product-price {
     font-size: 20px;
     font-weight: 550;
@@ -511,3 +528,180 @@ details[open] .accordion-arrow {
     color: white;
     margin: 0;
 }
+
+@media (max-width: 768px) {
+
+    body {
+      overflow-x: hidden;
+    }
+  
+    /* product detail */
+    .product-detail {
+      margin: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+  
+    .product-image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 16px;
+  
+    }
+  
+    .product-info {
+      gap: 24px;
+    }
+  
+    .product-title {
+      gap: 18px;
+    }
+  
+    .product-title > p {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+  
+    .product-title article {
+      font-size: 22px;
+      color: black;
+    }
+  
+    .add-to-cart-button-big {
+      width: 100%;
+      height: 56px;
+      padding: 16px 24px;
+      border-radius: 30px;
+      order: 2;
+  
+    }
+  
+    .add-to-cart-button-big img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .add-to-cart-button-big p {
+      font-size: 20px;
+      margin: 0;
+    }
+  
+    .accordion-card {
+      order: 3;
+      width: 100%;
+      max-width: none;
+      box-sizing: border-box;
+      padding: 20px 22px;
+      border-radius: 16px;
+      gap: 0;
+    }
+  
+    summary {
+      min-width: 0;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  
+    summary p {
+      font-size: 16px;
+    }
+  
+    .accordion-item {
+      padding-top: 16px;
+    }
+  
+    .accordion-item:first-child {
+      padding-top: 0;
+    }
+  
+    /* You might also like */
+    .featured-product {
+      padding: 0 0 0 22px;
+      margin-top: 36px;
+      margin-bottom: 40px;
+    }
+  
+    .featured-product-title {
+      padding-right: 22px;
+      margin-bottom: 24px;
+    }
+  
+    .featured-product-title > p {
+      font-size: 26px;
+      line-height: 1.1;
+      margin: 0;
+    }
+  
+    .view-all-button {
+      height: 36px;
+      padding: 10px 14px;
+      gap: 6px;
+    }
+  
+    .view-all-button p {
+      font-size: 14px;
+      margin: 0;
+    }
+  
+    .product-row {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      padding-right: 22px;
+      padding-bottom: 10px;
+    }
+  
+    .product-row::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .product-card {
+      flex: 0 0 285px;
+      width: 285px;
+      height: 406px;
+      scroll-snap-align: start;
+      border-radius: 10px;
+      padding: 20px 16px;
+    }
+  
+    .product-card a img {
+      height: 220px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  
+    .product-card a p {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  
+    .product-card a p:last-child {
+      font-size: 22px;
+    }
+  
+    .discount-badge {
+      top: 16px;
+      left: auto;
+      right: 16px;
+      width: 76px;
+      height: 32px;
+    }
+  
+    .add-to-cart-home {
+      width: 78px;
+      height: 32px;
+      gap: 6px;
+    }
+  
+    .add-to-cart-home p {
+      font-size: 14px;
+    }
+  
+  
+  }

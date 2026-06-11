@@ -314,6 +314,16 @@
         justify-content: center;
     }
 
+    .mobile-tag-section a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .mobile-tag-section a:hover {
+        text-decoration: underline;
+        color: #6a40ff;
+    }
+
     .mobile-tag {
         display: flex;
         flex-direction: column;
