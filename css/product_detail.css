@@ -444,7 +444,7 @@ details[open] .accordion-arrow {
 }
 
 .cart-overlay-container {
-    max-height: 414px;
+    max-height: 300px;
     overflow-y: auto;
 }
 
@@ -534,6 +534,10 @@ details[open] .accordion-arrow {
 }
 
 @media (max-width: 768px) {
+    .cart-overlay-container{
+        max-height: 300px;
+        overflow-y: auto;
+    }
 
     body {
       overflow-x: hidden;
@@ -642,12 +646,12 @@ details[open] .accordion-arrow {
   
     .view-all-button {
       height: 36px;
-      padding: 10px 14px;
+      padding: 10px 10px;
       gap: 6px;
     }
   
     .view-all-button p {
-      font-size: 14px;
+      font-size: 12px;
       margin: 0;
     }
   
