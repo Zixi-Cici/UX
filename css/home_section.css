@@ -36,6 +36,7 @@
     align-items: center;
     padding: 3px 3px 3px 24px;
     border-radius: 45px;
+    transition: 0.3s;
 }
 
 .hero-button p {
@@ -47,6 +48,10 @@
 .hero-button img {
     width: 40px;
     height: 40px;
+}
+
+.hero-button:hover {
+    outline: 3px solid #6a40ff;
 }
 
 .hero-shopping {
@@ -150,16 +155,30 @@
     flex-direction: column;
     position: relative;
 }
-.product-card > img {
+.product-card a img {
     height: 220px;
     align-self: center;
     margin-bottom: 20px;
 }
-.product-card > p {
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.product-card a p {
     font-size: 18px;
     font-weight: 550;
     margin: 4px;
 }
+.product-card a:hover p {
+    text-decoration: underline;
+}
+.product-card:hover {
+    transform: translate(0px, -4px);
+    box-shadow: 5px 5px 15px 0px rgba(150, 157, 187, 0.20);
+}
+
 .add-to-cart-home {
     border: none;
     background: linear-gradient(90deg, #6a40ff 0%, #a06fff 100%);

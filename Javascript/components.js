@@ -51,3 +51,13 @@ if(navCartIcon){
     })
 
 }
+
+//home - shop now button
+const heroButton = document.querySelector(".hero-button")
+
+if(heroButton){
+    heroButton.addEventListener("click", function(){
+        window.location.href = "product_list_toy.html"
+    })
+
+}
